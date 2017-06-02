@@ -32,3 +32,5 @@ console.log(add(5, 5));
 
 // git status
 // git init
+// git add .   ---   git add FILENAME
+// git remote add origin https://github.com/Furqankhanzada/typeScript-Class.git
