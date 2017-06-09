@@ -23,18 +23,20 @@ students.unshift(
       }
 )
 
+
+// [['Furqan', 'Khanzada', 28, 'furqan.khanzada@gmail.com'],]
 console.log('students :', students);
 
-let modifiedStudents = students.map(function(student){
-      let fullName = `${student.firstName} ${student.lastName}`;
-      let s = {fullName, ...student};
-      delete student.firstName;
-      delete student.lastName;
-      return s
+// let modifiedStudents = students.map(function(student){
+//       let fullName = `${student.firstName} ${student.lastName}`;
+//       let s = {fullName, ...student};
+//       delete student.firstName;
+//       delete student.lastName;
+//       return s
 
-})
+// })
 
-console.log('modifiedStudents :', modifiedStudents);
+//console.log('modifiedStudents :', modifiedStudents);
 
 
 //let testObj : string[] = new Array()
@@ -70,8 +72,39 @@ console.log(add(5, 5));
 console.log('days : ', days[1]);
 
 days.forEach(function(value, index, arr){
-      console.log('val', value, index);
+      //console.log('val', value, index);
 })
+
+for(let i = 0; i < 10; i++){
+      //console.log('i :', i);
+}
+
+for(let key in students[0]){
+      //console.log(key);
+}
+
+let task = students.map(function(student, i){
+      let values: any[] = [];
+      for(let key in student){
+            values.push(student[key])
+      }
+      return values
+})
+
+//console.log('task :', task);
+
+
+function testCallback(num1, num2, ggg){
+      setTimeout(function(){
+            ggg(num1 + num2, 'test');
+      }, 1000)
+}
+
+//console.log(let a = testCallback(1, 2, 3));
+testCallback(1, 2, function(param1, b){
+      console.log('param1 :', param1)
+      console.log('b :', b)
+});
 
 
 
