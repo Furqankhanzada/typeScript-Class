@@ -77,10 +77,26 @@ testCallback(1, 2, function (param1, b) {
 });
 function filterStudents(arrayObj, age, operator) {
     return arrayObj.filter(function (obj) {
+        //eval('1 + 3')
         return eval(obj.age + operator + age);
     });
 }
 console.log('fl :', filterStudents(students, 28, '=='));
+var a = 1;
+var b = 1;
+if (a == b) {
+    console.log('TRUE');
+}
+else {
+    console.log('False');
+}
+switch (a) {
+    case 1:
+        break;
+    case 2:
+        break;
+    default:
+}
 // Password: @ppbakerzzong50
 // Optional params [mail_id?:string], default value [param2[:type] = default_value], rest params
 // git status
