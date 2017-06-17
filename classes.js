@@ -20,6 +20,7 @@ var Human = (function () {
         }, 2000);
     }
     Human.prototype.setFulName = function (fName, lName) {
+        console.log(' Human age inner :', Human.age);
         this.fullName = fName + " " + lName;
     };
     Human.prototype.getFullName = function () {
@@ -27,10 +28,12 @@ var Human = (function () {
     };
     return Human;
 }());
+Human.age = 0;
 var h = new Human('Furqan', 'Khanzada');
 console.log(' h :', h.getFullName());
 console.log(' fname :', h.fullName);
 console.log(' instanceof :', h instanceof Human);
+console.log(' Human age :', Human.age);
 setTimeout(function () {
     console.log(' h :', h.getFullName());
     console.log(' fname :', h.fullName);

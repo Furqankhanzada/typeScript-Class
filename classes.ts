@@ -1,5 +1,7 @@
 class Human {
-    fullName: string
+    public fullName: string
+    static age: number = 0
+
     constructor(fName: string, lName: string){
         // let _self = this;
         // setTimeout(function(){
@@ -12,6 +14,7 @@ class Human {
 
     }
     setFulName(fName: string, lName: string) : void {
+        console.log(' Human age inner :',  Human.age);
         this.fullName = `${fName} ${lName}`;
     }
     getFullName() : string {
@@ -23,6 +26,7 @@ const h = new Human('Furqan', 'Khanzada')
 console.log(' h :',  h.getFullName());
 console.log(' fname :',  h.fullName);
 console.log(' instanceof :',  h instanceof Human);
+console.log(' Human age :',  Human.age);
 
         setTimeout(function(){
 console.log(' h :',  h.getFullName());
