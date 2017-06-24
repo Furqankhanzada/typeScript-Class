@@ -2,9 +2,9 @@
 
 // Call when DOM ready
 $(function(){
-    fetch('students.json').then((response) => {
-        return response.json()
-    }).then((students) => {
+    let studentsArray = [];
+    function renderStudent(students){
+        $('tbody').html('');
         students.forEach((student, index) => {
             $('tbody').append(`
             <tr>
@@ -15,17 +15,22 @@ $(function(){
             </tr>
             `)
         });
+    }
+    fetch('students.json').then((response) => {
+        return response.json()
+    }).then((students) => {
+        studentsArray = students;
+        renderStudent(students)
     })
 
     $('button').on('click', function(){
-        $('tbody').append(`
-            <tr>
-                <td>3</td>
-                <td>sdasd</td>
-                <td>asdasd</td>
-                <td>asdasd</td>
-            </tr>
-            `)
+        
+        studentsArray.push({
+            name: $('input[name="name"]').val(),
+            age: $('input[name="age"]').val(),
+            email: $('input[name="email"]').val()
+        })
+        renderStudent(studentsArray)
     })
 
 
