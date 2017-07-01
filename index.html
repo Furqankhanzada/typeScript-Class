@@ -4,29 +4,32 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <style type="text/css">
+  .active{
+    color: green;
+    font-size: 16px;
+    font-family: 'Arial'
+  }
+  .parent{
+    background: #ccc;
+  }
+  </style>
 </head>
 <body>
-  <input name="name" placeholder="Name" />
-  <input name="age" placeholder="Age" />
-  <input name="email" placeholder="Email" />
-  <button>Add New Student</button>
-
-<div class="header">
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Index</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
-      </tr>
-      <tbody>
-      </tbody>
-    </thead>
-  </table>
-
+  <ul>
+    <li>One</li>
+    <li class="active">Two</li>
+    <li>Three</li>
+    <li>Four</li>
+    <li>Five</li>
+    <li>Six</li>
+  </ul>
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+  <button class="parent">Parent</button>
 </div>
-<script src="main.js"></script>
+
+<script src="jq.js"></script>
 
 </body>
 </html>
